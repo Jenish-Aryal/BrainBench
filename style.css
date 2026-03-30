@@ -1,0 +1,391 @@
+@keyframes nav{
+    from{}
+    to{
+        background-color: #c8f4ff;
+        transform: translatey(-5px);
+        color: #0077f6;
+        scale: 1.05;
+    }
+}
+@keyframes img{
+    from{}
+    to{
+        filter: invert(36%) sepia(93%) saturate(3015%) hue-rotate(200deg) brightness(97%) contrast(105%);
+    }
+}
+@keyframes game{
+    from{}
+    to{
+        border:0;
+        transform: translatey(-5px);
+        color: #a2c8ff;
+    }
+}
+@keyframes gameOut {
+    from{
+        transform: translateY(-5px);
+        color: #a2c8ff;
+        border: 0;
+    }
+    to{
+        transform: translateY(0);
+        color: inherit;
+        border: 2px solid #c8e6ff;
+    }
+}
+@keyframes timg{
+    from{}
+    to{
+        scale: 1.2;
+        filter: invert(88%) sepia(20%) saturate(600%) hue-rotate(180deg) brightness(105%) contrast(95%);
+    }
+}
+@keyframes timgOUT{
+    from{scale: 1.2;
+        filter: invert(88%) sepia(20%) saturate(600%) hue-rotate(180deg) brightness(105%) contrast(95%);}
+    to{
+        scale: 1;
+    }
+}
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #e5e7ea;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(-45deg, #90e0ef, #0077f6);
+    color: white;
+    border-radius: 0 0 30px 30px;
+}
+
+nav{
+    padding: 8px 10px;
+    background-color: white;
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+
+nav a{
+    position: relative;
+    padding: 5px 10px;
+    font-size: large;
+}
+
+nav a img{
+    position: relative;
+    top: 3px;
+    width: 1em;
+    height: 1em;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #c8f4ff;
+    border-radius: 10px;
+    font-family: "instrument serif",serif;
+    }
+
+nav a:hover{
+    animation: nav 0.3s forwards;
+}
+a:hover img{
+    animation: img 0.3s forwards;
+}
+
+.sign-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    color: #fff;
+    background-color: #0077f6c2;
+    border-radius: 15px;
+}
+
+.sign-in:hover{
+    background-color: #0077f6a2;
+}
+
+.title{
+    display: grid;
+    margin: 70px auto;
+}
+.main-heading{
+    font-size: 5rem;
+    font-family: 'Orbitron';
+}
+.sub-heading{
+    justify-self: end;
+    color: #ffffffbb;
+}
+
+.content{
+    margin: 5% 3%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+}
+
+.test{
+    background-color: #ffffff;
+    border: 2px solid #c8e6ff;
+    box-shadow: 3px 10px 15px rgba(0,0,0,.1);
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    padding: 30px;
+    height: auto;
+    flex-basis: 30%;
+    gap: 10px;
+}
+
+.ti{
+    height: 10em;
+    justify-self: center;
+}
+
+.game{
+    font-size: 3em;
+    letter-spacing: -2px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.test div{
+    text-align: center;
+}
+
+.test:hover{
+    animation: game .6s forwards;
+    cursor: pointer;
+}
+
+.test{
+    animation: gameOut 0.6s forwards;
+}
+
+.test:hover .ti{
+    animation: timg .6s forwards
+}
+
+.ti{
+    animation: timgOUT .6s forwards;
+}
+
+.footer img,.d-footer img{
+    height: 20px;
+    width: 20px;
+}
+
+.footer-cointainer{
+    width: 100%;
+    background: linear-gradient(-45deg, #90e0ef, #0077f6);
+    border-radius: 30px 30px 0 0 ;
+}
+
+.footer{
+    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 4fr 3fr 3fr 1fr;
+    padding: 50px 70px 50px 50px;
+}
+
+.footer div{
+    display: flex;
+    flex-flow: column;
+    font-size: .8em;
+    color: white;
+    gap: 10px;
+}
+
+.footer div span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-weight: 100;
+}
+
+.footer-name{
+    width: 100%;
+    border-top: 1px solid white;
+    padding: 20px;
+    text-align: left;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 300;
+}
+
+.d-name{
+    font-size: 2em;
+    font-family: 'orbitron';
+}
+
+.user-info,.stats{
+    font-family: 'inter',sans-serif;
+    margin: 20px auto 20px;
+    padding: 20px;
+    width: 75%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #00000011;
+
+}
+
+.stats-cointainer{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.username{
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.st{
+    font-weight: 500;
+}
+
+.ed{
+    margin-top: 30px;
+    color:#0077f6;
+    font-weight: 600;
+    position: relative;
+    left: 30%;
+}
+
+.df{
+    border-radius: 0px;
+    padding: 20px;
+    
+}
+
+.d-footer{
+    text-align: right;
+    position: relative;
+    font-size: 0.9em;
+    right: 12%;
+}
+
+.dfooter-p{
+    line-height: 2em;
+    margin-bottom: 20px;
+}
+
+.about-content{
+    margin: 50px auto;
+    width: 80%;
+    display: grid;
+    gap: 30px;
+}
+
+.about-card{
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #c8e6ff;
+    box-shadow: 3px 10px 15px rgba(0,0,0,.1);
+}
+
+.about-card h2{
+    margin-bottom: 10px;
+    color: #0492c2;
+}
+
+.about-card p{
+    line-height: 1.6;
+}
+
+.about-card ul{
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.sign-body{
+    display: grid;
+    place-items: center;
+}
+
+.sign-card{
+    margin-top: 120px;
+    width: 400px;
+    padding: 30px;
+    display: grid;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.sign-heading{
+    font-size: 2em;
+    font-weight: 900;
+    margin: 20px auto ;
+    height: 2em;
+    color: #367588;
+
+}
+
+.form{
+    display: grid;
+    place-items: center;
+    gap: 15px;
+}
+
+input{
+    padding: 10px;
+    min-width: 300px;
+    height: 40px;
+    border-radius: 6px;
+    border: 2px solid #016064;
+}
+
+.submit{
+    height: auto;
+    background: #016064;
+    font-size: ;
+    color: white;
+    font-weight: 500;
+}
+
+.submit:hover{
+    cursor: pointer;
+}
+
+.ins-sign-up{
+    color: #0077f6;
+    text-decoration: none;
+}
+
+.ins-des{
+    font-weight: 100;
+    margin: 10px auto 20px;
+    justify-self: end;
+}
+
+.fpass{
+    position: relative;
+    right: 20px;
+    justify-self: end;
+    font-weight: 300;
+    color: #0077f6;
+    text-decoration: underline;
+}
